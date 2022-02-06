@@ -53,3 +53,15 @@ Invoke-Command list { get-VM | measure-VM }
 
 # Active Directory 
 Get-WindowsCapability -Online -Name RSAT*
+Add-WindowsCapability -Online -Name rsat.ActiveDirectory.DS-LDS 
+search-ADAccount -AccountDisabled
+search-ADAccount -Lockedout 
+search-ADAccount -PasswordNeverExpires 
+
+get-aduser -Identity idnajp
+get-aduser idnajp
+get-aduser -Identity idnajp -Properties *
+
+Get-ADUser -Filter * -SearchBase "OU=QA,DC=ideasdev,DC=int"
+Get-ADUser -Filter * -SearchBase "OU=QA,DC=ideasdev,DC=int" -Properties LastLogonDate, Department | Format-Table Name, LastLogonDate, Department
+
