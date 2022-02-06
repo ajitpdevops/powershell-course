@@ -40,14 +40,15 @@ Get-VM | Enable-VMResourceMetering
 Get-VM | Measure-VM
 Invoke-Command list { get-VM | measure-VM }
 
-# Comparision Operator
+# Comparision Operators in powershell 
 # -eq, -ne, -gt, -lt, -ge, -le, -like, -notlike 
- 
+# use c infornt of the operator to enforce case sensitivity 
+
 5 -eq 4
 5 -gt 4 
 "test" -like "something"
 "test" -like "tes*"
-"TEST" -clike "tes*" # c is for case sensitivity 
+"TEST" -clike "tes*"  #case sensitivity 
 
 
 # Active Directory 
