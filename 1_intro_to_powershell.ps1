@@ -8,6 +8,8 @@ get-aduser
 
 Get-Service -Name wuauserv
 Get-Service -Name wuauserv,wsearch
+Get-Process | 
+get-process powershell
 
 Get-Help Get-Service
 help Get-Service
