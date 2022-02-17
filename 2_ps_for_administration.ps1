@@ -40,17 +40,32 @@ Get-VM | Enable-VMResourceMetering
 Get-VM | Measure-VM
 Invoke-Command list { get-VM | measure-VM }
 
-# Comparision Operator
+# Comparision Operators in powershell 
 # -eq, -ne, -gt, -lt, -ge, -le, -like, -notlike 
- 
+# use c infornt of the operator to enforce case sensitivity 
+
 5 -eq 4
 5 -gt 4 
 "test" -like "something"
 "test" -like "tes*"
-"TEST" -clike "tes*" # c is for case sensitivity 
+"TEST" -clike "tes*"  #case sensitivity 
 
 
 # Active Directory 
 Get-WindowsCapability -Online -Name RSAT*
+<<<<<<< HEAD
 
+=======
+Add-WindowsCapability -Online -Name rsat.ActiveDirectory.DS-LDS 
+search-ADAccount -AccountDisabled
+search-ADAccount -Lockedout 
+search-ADAccount -PasswordNeverExpires 
+
+get-aduser -Identity idnajp
+get-aduser idnajp
+get-aduser -Identity idnajp -Properties *
+
+Get-ADUser -Filter * -SearchBase "OU=QA,DC=ideasdev,DC=int"
+Get-ADUser -Filter * -SearchBase "OU=QA,DC=ideasdev,DC=int" -Properties LastLogonDate, Department | Format-Table Name, LastLogonDate, Department
+>>>>>>> 26e0ebd366377a36a1dbde55df19447a9b823e67
 
