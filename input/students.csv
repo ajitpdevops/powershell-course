@@ -1,0 +1,9 @@
+#TYPE System.Management.Automation.PSCustomObject,,,
+Name,Math,English,Age
+Ajit,95,46,20
+Amit,36,47,30
+Anit,74,63,12
+Mare,48,35,34
+Joy,74,74,24
+John,56,58,16
+Samba,45,94,75

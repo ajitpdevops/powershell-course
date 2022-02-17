@@ -52,3 +52,5 @@ Invoke-Command list { get-VM | measure-VM }
 
 # Active Directory 
 Get-WindowsCapability -Online -Name RSAT*
+
+

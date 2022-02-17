@@ -5,6 +5,7 @@ Get-HotFix
 Get-PSReadLineKeyHandler
 
 get-aduser
+Get-ChildItem | Measure-Object | Format-Table
 
 Get-Service -Name wuauserv
 Get-Service -Name wuauserv,wsearch
@@ -30,3 +31,15 @@ Get-Module
 Get-Module -ListAvailable
 Find-Module Az
 Find-Module Az -AllVersions
+
+Get-ChildItem | Where-Object {$_.Extension -eq '.md'}
+Get-Process | Where-Object  {$_.CPU -gt 20 } | Measure-Object
+Get-Process | Where-Object  {$_.CPU -gt 20 } | Sort-Object {$_.Id}
+
+Get-ChildItem | ForEach-Object {$_.Length} | Measure-Object -Average
+
+(Get-Process | Where-Object {$_.id -gt 4000} | ForEach-Object {$_.CPU} | Measure-Object -Average).Average
+
+Get-PSDrive
+
+Get-Command *user*

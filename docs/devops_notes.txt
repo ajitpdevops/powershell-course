@@ -1,0 +1,11 @@
+Linux 
+Scripting 
+Troubleshooting
+AWS 
+Networking and Security Concepts 
+Virtualization Concepts 
+Jenkins 
+Hands-on Ansible 
+CI/CD 
+Containers (Docker)
+
