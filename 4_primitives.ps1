@@ -24,7 +24,7 @@ $sb = [System.Text.StringBuilder]::new()
 $sb.GetType()
 
 # Create a datetime object 
-[datetime]::new(1988, 5,26)
+[DateTime]::new(1988, 5,26)
 New-Object -TypeName datetime
 
 # Create an array
@@ -50,3 +50,22 @@ $str[1].GetType()
 
 $arr += 'Tom'
 $arr
+
+# [Object] :: thing - Static members 
+[datetime] | Get-Member -Static
+[datetime]::Now
+[Environment] | Get-Member -Static
+
+# @{ } Hash Table
+ $ht = @{ 'Ajit' = 20; 'Anvi' = 23 }
+ $ht
+ $ht['Ajit']
+ $ht.Add
+
+ #Measure does not work with hash table 
+ $ht | Measure-Object
+ $ht.GetEnumerator() | Measure-Object
+
+ #creating custom object 
+$obj = [PSCustomObject]@{ A = 5; B=10 }
+$obj | Get-Member
