@@ -1,0 +1,9 @@
+#TYPE System.Management.Automation.PSCustomObject,,,
+"Name","Math","English","Age","Sum"
+"Ajit","95","46","20","141"
+"Amit","36","47","30","83"
+"Anit","74","63","12","137"
+"Mare","48","35","34","83"
+"Joy","74","74","24","148"
+"John","56","58","16","114"
+"Samba","45","94","75","139"
