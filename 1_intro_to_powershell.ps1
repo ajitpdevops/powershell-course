@@ -30,3 +30,5 @@ Get-Module
 Get-Module -ListAvailable
 Find-Module Az
 Find-Module Az -AllVersions
+
+Get-Command -Module * | measure

@@ -12,3 +12,14 @@
 
 - psgallery 
 - 
+
+# Pipeline 
+
+# Get-Member 
+- Powershell objects, properties, and methods
+- "X-ray" of the powershell pipeline
+- Dot Notation syntax = object.property 
+- Storing objects in variables 
+- Using Parenteses to refer to Objects 
+
+# 

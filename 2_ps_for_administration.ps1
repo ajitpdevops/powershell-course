@@ -65,3 +65,12 @@ get-aduser -Identity idnajp -Properties *
 Get-ADUser -Filter * -SearchBase "OU=QA,DC=ideasdev,DC=int"
 Get-ADUser -Filter * -SearchBase "OU=QA,DC=ideasdev,DC=int" -Properties LastLogonDate, Department | Format-Table Name, LastLogonDate, Department
 
+Get-ADUser -Filter {Department -eq 'Marketing'-or Department -eq 'sales' or Department -like '*I*'}
+
+set-adAccountpassword Lara -Newpassword (Read-Host -AsSecureString )
+
+set-ADUser Lara -Add @{carLicense='ABCD123'}
+get-AdUser Lara -Properties carLicense
+
+Get-Command -Module * | measure
+
