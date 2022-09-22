@@ -45,7 +45,7 @@ function Get-Wheather {
     }
 
     switch ($Units) {
-        'Metric' { 
+        'Metric' {
             $uriString += "?m"
          }
         'USCS' {
