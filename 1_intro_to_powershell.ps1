@@ -32,9 +32,6 @@ Get-Module -ListAvailable
 Find-Module Az
 Find-Module Az -AllVersions
 
-<<<<<<< HEAD
-Get-Command -Module * | measure
-=======
 Get-ChildItem | Where-Object {$_.Extension -eq '.md'}
 Get-Process | Where-Object  {$_.CPU -gt 20 } | Measure-Object
 Get-Process | Where-Object  {$_.CPU -gt 20 } | Sort-Object {$_.Id}
@@ -46,4 +43,3 @@ Get-ChildItem | ForEach-Object {$_.Length} | Measure-Object -Average
 Get-PSDrive
 
 Get-Command *user*
->>>>>>> 14bdacc8a173c337038d6a3c1234eb40f7e02e76
